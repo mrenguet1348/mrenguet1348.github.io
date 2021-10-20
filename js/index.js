@@ -1,5 +1,5 @@
 "use strict"
-let const DICO_MDP = ["chat", "chien", "pates", "cochon", "poule", "canard", "vache", "TIEPHEC", "HE201992", "oie"];
+const DICO_MDP = ["chat", "chien", "pates", "cochon", "poule", "canard", "vache", "TIEPHEC", "HE201992", "oie"];
 let count = 0;
 let password;
 let fraudDetection = 0;
