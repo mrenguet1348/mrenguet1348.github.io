@@ -32,16 +32,16 @@ function passwordInput()//récupère le mot de passe
 */
 function verifMdp(password)// fonction qui vérifie si oui ou non le password en entré corespond au moins à 80% à une entrée du dictionnaire
 {
-	for(let i = 0; i < array.length; i++)//on parcourt la liste des mots du dico (tableau).
+	for(let i = 0; i < DICO_MDP.length; i++)//on parcourt la liste des mots du dico (tableau).
 	{
-		for(let j = 0; j < array[i].length; j++)//on parcour chaque mot à l'indice i du dico. exemplesi i = 0 on parcours les lettres du mot chien
+		for(let j = 0; j < DICO_MDP[i].length; j++)//on parcour chaque mot à l'indice i du dico. exemplesi i = 0 on parcours les lettres du mot chien
 		{
-			if(array[i][j] == password[j])//condition qui vérifie si la jème lettre du ième mot du dico correspond à la jème lettre du password encodé
+			if(DICO_MDP[i][j] == password[j])//condition qui vérifie si la jème lettre du ième mot du dico correspond à la jème lettre du password encodé
 			{
 				count++;// incrémente le nombre de lettre similaire à la même position dans les deux mots
 			}
 		}
-		pourcentage_similitude = count / array[i].length;//On divise count(nombre de lettre similaire) avec la longueur du mot du dictionnaire pour avoir le pourcentage de similitude
+		pourcentage_similitude = count / DICO_MDP[i].length;//On divise count(nombre de lettre similaire) avec la longueur du mot du dictionnaire pour avoir le pourcentage de similitude
 		if(pourcentage_similitude >= 0.8)//si plus de 80% de similitude on incrémente le compteur "fraudDetection"
 		{
 			fraudDetection++;
