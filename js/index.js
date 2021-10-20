@@ -1,9 +1,10 @@
 "use strict"
 const DICO_MDP = ["chat", "chien", "pates", "cochon", "poule", "canard", "vache", "TIEPHEC", "HE201992", "oie"];
 let count = 0;
-let password;
+let password = "";
 let fraudDetection = 0;
-let continueStatus;
+let continueStatus = 0;
+let pourcentage_similitude = 0;
 
 /**
 * fonction qui récupère le mot de passe tant que le mot de passe est différent de exit
